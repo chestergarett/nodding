@@ -1,0 +1,47 @@
+{
+  "name": "nodding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist",
+    "start": "node dist/server.js",
+    "debug": "npm run dev -- --inspect",
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js",
+    "test": "jest --runInBand",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chestergarett/nodding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chestergarett/nodding/issues"
+  },
+  "homepage": "https://github.com/chestergarett/nodding#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cls-hooked": "^4.2.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.20.1",
+    "sequelize-cli": "^6.4.1"
+  }
+}
