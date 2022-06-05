@@ -2,7 +2,7 @@ import '../src/config';
 import Database from '../src/database';
 import dbConfig from '../src/config/database';
 
-let dbConfig;
+let db;
 
 export default class TestHelpers {
     static async startDb(){
@@ -15,7 +15,7 @@ export default class TestHelpers {
         await db.disconnect();
     };
 
-    static syncDb(){
+    static async syncDb(){
         await db.sync();
     };
 }
